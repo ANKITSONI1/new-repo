@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="customer" name="name1" class="com.c2t.autowire.byname.Customer"
+		autowire="byName" /> 
+		
+	<!-- <bean id="customer" name="name1" class="com.c2t.autowire.byname.Customer">
+		<property name="address" ref="address1"/>
+		<property name="location" ref="location1"/>
+	</bean> -->
+
+	<bean name="address" class="com.c2t.autowire.byname.Address">
+		<property name="fulladdress" value="Wakad, Pune, India" />
+	</bean>
+
+	<bean name="location" class="com.c2t.autowire.byname.Location">
+		<property name="location" value="pune" />
+	</bean>
+
+</beans>

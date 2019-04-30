@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.c2t.di.HelloWorld">
+		<property name="name" value="Mkyong" />
+		<property name="age" value="30" />
+	</bean>
+	
+	
+	
+	<!-- 
+ 	<bean id="helloBean2" class="com.mkyong.common.HelloWorld">
+		<property name="name" value="Dinesh" />
+		
+	</bean>
+	 <bean id="helloBeanConstruct" class="com.mkyong.common.HelloWorld">
+		<constructor-arg value="MkyongCnstrctr" />
+	</bean>
+	
+	<bean id="helloBean3" class="com.mkyong.common.HelloWorld">
+		<constructor-arg value="Mkyong2" />
+		<constructor-arg ref="abc" />
+	</bean>
+	
+	<bean id="abc" class="com.mkyong.common.Employee">
+		<property name="emp" value="Employee" />
+	</bean>
+	 --> 
+	
+</beans>

@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<bean id="p1" class="com.c2t.bean.parentchild.Parent">
+		<property name="fname" value="java" />
+		<property name="lname" value="j2ee" />
+	</bean>
+
+	<bean id="id2" parent="p1">
+		<property name="fname" value="java 2" />
+	</bean>
+
+</beans>

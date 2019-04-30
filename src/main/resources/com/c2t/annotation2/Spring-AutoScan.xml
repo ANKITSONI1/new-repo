@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- The <context:component-scan> element does everything that <context:annotation-config> 
+		does, plus it configures Spring to automatically discover beans and declare 
+		them for you. What this means is that most (or all) of the beans in your 
+		Spring application can be declared and wired without using <bean>. -->
+
+	<!-- 
+	@Component—A general-purpose stereotype annotation indicating that 
+		the class is a Spring component 
+		@Controller—Indicates that the class defines 
+		a Spring MVC controller 
+		@Repository—Indicates that the class defines a data 
+		repository 
+		@Service—Indicates that the class defines a service 
+		-->
+
+	<context:component-scan base-package="com.c2t.annotation2" />
+	<!-- context:component-scan = context:annotation-config + autowriting -->
+
+</beans>

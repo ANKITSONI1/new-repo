@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="developer" class="com.c2t.autowire.byconstructor.Developer" autowire="constructor" />
+
+	<bean id="language2" class="com.c2t.autowire.byconstructor.Language" >
+		<property name="name" value="Java" />
+	</bean>
+	
+	<bean id="java2" class="com.c2t.autowire.byconstructor.Java" >
+		<property name="name" value="Java" />
+	</bean>
+
+</beans>

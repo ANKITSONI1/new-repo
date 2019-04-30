@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="bean1" class="com.c2t.di.constructor.HelloWorld">
+		<constructor-arg value="java-j2ee" />
+		<constructor-arg value="10" type="int" />
+	</bean>
+
+	<bean id="bean2" class="com.c2t.di.constructor.HelloWorld">
+		<constructor-arg value="value100" />
+		<constructor-arg value="10" type="int" />
+		<constructor-arg ref="emp1" />
+	</bean>
+
+
+	<bean id="emp1" class="com.c2t.di.constructor.Employee">
+		<property name="emp" value="I am employee" />
+	</bean>
+
+
+</beans>

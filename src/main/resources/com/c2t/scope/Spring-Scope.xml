@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="id" class="com.c2t.scope.HelloWorld" scope="prototype">
+		<property name="name" value="java j2ee" />
+	</bean>
+	
+	<!-- <bean id="id_prototype" class="com.c2t.scope.HelloWorld" scope="session">
+		<property name="name" value="java j2ee" />
+	</bean> -->
+	
+</beans>

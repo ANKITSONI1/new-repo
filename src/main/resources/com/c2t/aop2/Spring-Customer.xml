@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="customerService" class="com.c2t.aop2.CustomerService">
+		<property name="name" value="Yong Mook Kim" />
+		<property name="url" value="http://www.nc.com" />
+	</bean>
+
+	<bean id="hijackBeforeMethodBean" class="com.c2t.aop2.HijackBeforeMethod" />
+ 	<bean id="hijackAfterMethodBean" class="com.c2t.aop2.HijackAfterMethod" />
+	<bean id="hijackThrowExceptionBean" class="com.c2t.aop2.HijackThrowException" />
+ 
+	<bean id="customerServiceProxy" 
+                 class="org.springframework.aop.framework.ProxyFactoryBean">
+ 
+		<property name="target" ref="customerService" />
+ 
+		<property name="interceptorNames">
+			<list>
+				<value>hijackBeforeMethodBean</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
